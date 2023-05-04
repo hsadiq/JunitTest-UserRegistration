@@ -52,7 +52,7 @@ public class UserTest {
 
     @Test
     public void checkingPassword(){
-        boolean result = passwd.getPasswd("Sadiqueh");
+        boolean result = passwd.getPasswd("Sadiq123");
         Assertions.assertTrue(result);
     }
 }
