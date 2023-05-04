@@ -62,7 +62,7 @@ class PhoneNumber {
 
 class Password {
     public boolean getPasswd(String Passwd){
-        String password = "^(?=.*[A-Z])(?=.*[a-z][0-9]).{8,}$";
+        String password = "^(?=.*[A-Z])(?=.*[a-z][0-9])(?=.*[@#$%^&+=!]).{8,}$";
         Pattern patobj3 = Pattern.compile(password);
 
         Matcher matcher = patobj3.matcher(Passwd);
