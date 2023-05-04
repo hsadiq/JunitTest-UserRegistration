@@ -7,7 +7,6 @@ import org.junit.jupiter.api.*;
 public class UserTest {
 
     FirstName firstName = new FirstName();
-    LastName lastName = new LastName();
 
 
     @BeforeAll
@@ -34,6 +33,7 @@ public class UserTest {
 
     @Test
     public void checking_Last(){
+        FirstName lastName = new FirstName();
         boolean result = lastName.getLastName("Hussain");
         Assertions.assertTrue(result);
     }

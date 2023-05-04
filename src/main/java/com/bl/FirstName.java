@@ -1,8 +1,5 @@
 package com.bl;
 
-import com.sun.nio.sctp.AbstractNotificationHandler;
-
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,9 +16,6 @@ public class FirstName {
 
         return result;
     }
-}
-
-class LastName {
 
     public boolean getLastName(String last) {
 
