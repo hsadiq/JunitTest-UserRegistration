@@ -8,8 +8,8 @@ public class UserTest {
 
     FirstName firstName = new FirstName();
     LastName lastName = new LastName();
-
     Email email = new Email();
+    PhoneNumber phoneNumber = new PhoneNumber();
 
 
     @BeforeAll
@@ -42,6 +42,11 @@ public class UserTest {
     @Test
     public void checkingEmail(){
         boolean result = email.getEmail("abc.xyz@bl.co.in");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void checkingNumber(){
+        boolean result = phoneNumber.getMobile("91 7828606108");
         Assertions.assertTrue(result);
     }
 }

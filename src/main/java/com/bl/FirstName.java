@@ -47,3 +47,15 @@ class Email {
         return result;
     }
 }
+
+class PhoneNumber {
+    public boolean getMobile(String Number){
+        String mobile = "^[0-9]{2,3} +[0-9]{10}";
+        Pattern patobj2 = Pattern.compile(mobile);
+
+        Matcher match3 = patobj2.matcher(Number);
+        boolean result = match3.matches();
+
+        return result;
+    }
+}
