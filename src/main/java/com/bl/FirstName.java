@@ -59,3 +59,15 @@ class PhoneNumber {
         return result;
     }
 }
+
+class Password {
+    public boolean getPasswd(String Passwd){
+        String password = "^[a-z]{8,}$";
+        Pattern patobj3 = Pattern.compile(password);
+
+        Matcher matcher = patobj3.matcher(Passwd);
+        boolean result = matcher.matches();
+
+        return result;
+    }
+}
