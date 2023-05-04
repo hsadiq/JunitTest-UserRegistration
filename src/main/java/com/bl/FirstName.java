@@ -5,7 +5,7 @@ import com.sun.nio.sctp.AbstractNotificationHandler;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-//Adding in UC-1
+
 public class FirstName {
 
     public boolean getFirstName(String first){
@@ -16,6 +16,20 @@ public class FirstName {
         Matcher matchobj = patternobj.matcher(first);
 
         boolean result = matchobj.matches();
+
+        return result;
+    }
+}
+
+class LastName {
+
+    public boolean getLastName(String last) {
+
+        String lastRegex = "[A-Z]{1}+[a-z]{3,}";
+        Pattern patternobj1 = Pattern.compile(lastRegex);
+
+        Matcher matcher1 = patternobj1.matcher(last);
+        boolean result = matcher1.matches();
 
         return result;
     }
