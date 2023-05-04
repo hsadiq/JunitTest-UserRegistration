@@ -16,9 +16,6 @@ public class FirstName {
 
         return result;
     }
-}
-
-class LastName {
 
     public boolean getLastName(String last) {
 
