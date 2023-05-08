@@ -25,24 +25,30 @@ public class UserTest {
     }
 
     @Test
-    public void  checking_First(){
+    public void  checking_First() throws InvalidUserException{
         boolean result = firstName.getFirstName("Sadiq");
-        Assertions.assertTrue(result);
+        if (!result){
+            throw new InvalidUserException("Invalid FirstName")
+        }
     }
 
     @Test
-    public void checking_Last(){
+    public void checking_Last() throws InvalidUserException{
         FirstName lastName = new FirstName();
         boolean result = lastName.getLastName("Hussain");
-        Assertions.assertTrue(result);
+        if (!result){
+            throw new InvalidUserException("Invalid Lastname!")
+        }
     }
 
 
     @Test
-    public  void  checking_Email(){
+    public  void  checking_Email() throws InvalidUserExcetion{
         FirstName email = new FirstName();
         boolean result = email.getEmail("abc.xyz@bl.co.in");
-        Assertions.assertTrue(result);
+        if (!result){
+            throw new InvalidUserException("Invalid Email")
+        }
     }
 
     @Test
@@ -53,9 +59,11 @@ public class UserTest {
     }
 
     @Test
-    public void checking_Password(){
+    public void checking_Password() throws InvalidUserException{
         FirstName passwd = new FirstName();
         boolean result = passwd.getPasswd("Sadiq123@");
-        Assertions.assertTrue(result);
+        if (!result){
+            throw new InvalidException("Invalid Password")
+        }
     }
 }
