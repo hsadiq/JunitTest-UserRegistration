@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class FirstName {
 
-    public boolean getFirstName(String first){
+    public boolean getFirstName(String first) {
 
         String firstRegex = "^[A-Z]{1}+[a-z]{3,}";
         Pattern patternobj = Pattern.compile(firstRegex);
@@ -17,7 +17,7 @@ public class FirstName {
         return result;
     }
 
-    public boolean getLastName(String last) {
+    public boolean getLastName(String last){
 
         String lastRegex = "[A-Z]{1}+[a-z]{3,}";
         Pattern patternobj1 = Pattern.compile(lastRegex);
@@ -27,9 +27,6 @@ public class FirstName {
 
         return result;
     }
-}
-
-class Email {
 
     public boolean getEmail(String Email){
         String email = "^[a-z]+([.][a-z]+)*@[a-z]+.[a-z]{2,3}([.][a-z]{2,3})*$";
@@ -40,9 +37,7 @@ class Email {
 
         return result;
     }
-}
 
-class PhoneNumber {
     public boolean getMobile(String Number){
         String mobile = "^[0-9]{2,3} +[0-9]{10}";
         Pattern patobj2 = Pattern.compile(mobile);
@@ -52,9 +47,7 @@ class PhoneNumber {
 
         return result;
     }
-}
 
-class Password {
     public boolean getPasswd(String Passwd){
         String password = "^(?=.*[A-Z])(?=.*[a-z][0-9])(?=.*[@#$%^&+=!]).{8,}$";
         Pattern patobj3 = Pattern.compile(password);

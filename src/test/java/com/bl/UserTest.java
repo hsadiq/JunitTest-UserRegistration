@@ -7,10 +7,7 @@ import org.junit.jupiter.api.*;
 public class UserTest {
 
     FirstName firstName = new FirstName();
-    FirstName lastName = new FirstName();
-    Email email = new Email();
-    PhoneNumber phoneNumber = new PhoneNumber();
-    Password passwd = new Password();
+
 
     @BeforeAll
     static void beforeall(){
@@ -36,22 +33,29 @@ public class UserTest {
 
     @Test
     public void checking_Last(){
+        FirstName lastName = new FirstName();
         boolean result = lastName.getLastName("Hussain");
         Assertions.assertTrue(result);
     }
+
+
     @Test
-    public void checkingEmail(){
+    public  void  checking_Email(){
+        FirstName email = new FirstName();
         boolean result = email.getEmail("abc.xyz@bl.co.in");
-        Assertions.assertTrue(result);
-    }
-    @Test
-    public void checkingNumber(){
-        boolean result = phoneNumber.getMobile("91 7828606108");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void checkingPassword(){
+    public void checking_PhoneNum(){
+        FirstName mobile = new FirstName();
+        boolean result = mobile.getMobile("91 7828606108");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void checking_Password(){
+        FirstName passwd = new FirstName();
         boolean result = passwd.getPasswd("Sadiq123@");
         Assertions.assertTrue(result);
     }
