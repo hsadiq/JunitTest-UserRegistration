@@ -7,7 +7,7 @@ import org.junit.jupiter.api.*;
 public class UserTest {
 
     FirstName firstName = new FirstName();
-    LastName lastName = new LastName();
+    FirstName lastName = new FirstName();
     Email email = new Email();
     PhoneNumber phoneNumber = new PhoneNumber();
     Password passwd = new Password();
