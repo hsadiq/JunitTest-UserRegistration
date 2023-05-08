@@ -25,7 +25,7 @@ public class EmailValidationTest {
         System.out.println("Test Running.........");
     }
 
-
+//Adding Sample Emails For Both Cases
     @Test
     public void testValidEmails() {
         ArrayList<String> email = new ArrayList<>();
